@@ -23,6 +23,6 @@ Thereafter additional application may be installed (via _**Y**es_ / _**N**o_ pro
 
 Credits:
 ----
-Many thanks to all the fine folks @ [irc://#debian](irc://holmes.freenode.net:6667/debian) including babilen & abrotman for their input & suggetions.
+Many thanks to all the fine folks @ [irc://freenode.net#debian](http://freenode.net) including babilen & abrotman for their input & suggetions.
 
 ------
