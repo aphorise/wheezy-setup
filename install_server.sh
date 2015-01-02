@@ -33,7 +33,7 @@ git libncurses5-dev libudev-dev libcurl4-openssl-dev libcurl3-dev \
 tcl dialog gpm aptitude rcconf nano vim sysstat mc wget curl \
 unzip nload htop screen nmap less rsync tree links2 byobu \
 apache2 php5 memcached php5-memcached php5-mysqlnd php5-adodb php5-gd php-apc php5-pgsql \
-gem rkhunter lynis
+rubygems rkhunter lynis
 #fail2ban psad //good for productinon server needs .conf adjustments
 
 #// ADJUST grub / boot for systemd IF NOT present
