@@ -11,7 +11,7 @@ The following applications are installed by default:
 debconf procps systemd ntp ntpdate build-essential gdb pkg-config autoconf libtool automake pkg-config cmake software-properties-common python-software-properties openssh-server git libncurses5-dev libudev-dev libcurl4-openssl-dev libcurl3-dev tcl dialog gpm aptitude rcconf nano vim sysstat mc wget curl unzip nload htop screen nmap less rsync tree links2 byobu apache2 php5 memcached php5-memcached php5-mysqlnd php5-adodb php5-gd php-apc php5-pgsql rkhunter lynis
 ```
 Thereafter additional application may be installed (via _**Y**es_ / _**N**o_ prompts that follow) including:
-  - [Postgre 9.3+ (or < later release)](http://www.postgresql.org/download/linux/debian/ "postgre-website")
+  - [Postgre 9.1+ (or < later release)](http://www.postgresql.org/download/linux/debian/ "postgre-website")
   - [GO (1.4) Programming Language](https://golang.org/dl/ "go-website") 
   - [Webmin](http://www.webmin.com/ "webmin-website") 
   - [Docker.io](https://docs.docker.com/installation/debian/ "docker.io-website")
