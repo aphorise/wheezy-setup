@@ -17,7 +17,7 @@ Thereafter additional application may be installed (via _**Y**es_ / _**N**o_ pro
   - [Docker.io](https://docs.docker.com/installation/debian/ "docker.io-website")
   - [RealVNC 5.2.2](https://www.realvnc.com/download/vnc/ "RealVNC-website") - (not tightvnc) 
   - [TeamViewer 10](http://www.teamviewer.com/en/download/linux.aspx "TeamViewer-website") - (also installs: ia32-libs-gtk)
-  - [Tomcat 7](https://packages.debian.org/wheezy/java/tomcat7 "debian-packages)
+  - [Tomcat 7](https://packages.debian.org/wheezy/java/tomcat7 debian-packages)
 
 >confirmed working with Debian 7.7 (Jan 2015) 
 
