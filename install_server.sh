@@ -1,5 +1,5 @@
 #!/bin/bash
-#// debian:wheezy install essentials for a desktop / server setup
+#// debian:wheezy install essentials for a common tool stacked dev / desktop setup. 
 #// "usermod -a -G sudo YOUR_USER" <-- executing user must be of sudo
 #// "dpkg-reconfigure tzdata"  <-- ensure correct TimeZone is set
 #// "dpkg-reconfigure locales" <-- ensure all
@@ -10,8 +10,10 @@ if line=$(grep -s -m 1 -e "contrib non-free" /etc/apt/sources.list.d/wheezy-extr
 else
 	sudo sh -c "echo 'deb http://http.debian.net/debian wheezy stable contrib non-free' > /etc/apt/sources.list.d/wheezy-extras.list"
 fi
-
-#enable 32-bit multi-arch if not already
+#//////////////
+#// enable 32-bit multi-arch if not already
+#// COMMENT - IF NO: 32-bit (TeamViewer) is needed
+#//////////////
 if dpkg --print-foreign-architectures | grep -i "i386" ; then
  echo "Already have 32-bit Arch"
 else
@@ -34,7 +36,10 @@ tcl dialog gpm aptitude rcconf nano vim sysstat mc wget curl \
 unzip nload htop screen nmap less rsync tree links2 byobu \
 apache2 php5 memcached php5-memcached php5-mysqlnd php5-adodb php5-gd php-apc php5-pgsql \
 rubygems ruby-full rkhunter lynis
-#fail2ban psad //good for productinon server needs .conf adjustments
+#//for production servers & stats: 
+#// fail2ban psad	//iptables & anti-port (.conf adjustments)
+#// munin munin-node munin-plugins-core munin-plugins-extra	//for proc / monitoring. 
+
 
 #// ADJUST grub / boot for systemd IF NOT present
 sudo sh -c "sed 's/\"quiet\"/\"quiet nomodeset init=\/bin\/systemd\"/' /etc/default/grub >> grub && mv /etc/default/grub /etc/default/grub.old && mv grub /etc/default/grub"
@@ -61,6 +66,12 @@ echo " "
 	wget https://storage.googleapis.com/golang/go1.4.linux-amd64.tar.gz
 	sudo tar -C /usr/local -xzf go1.4.linux-amd64.tar.gz && rm -f go1.4*
 	sudo sh -c "echo 'export PATH=$PATH:/usr/local/go/bin' >> /etc/profile"
+ fi
+echo " "
+ echo -n "Node.js 1.4.x+ - install? - (Y/n) :" && read YESNO
+ if ( echo $YESNO | grep -iq "Y\|Ye|\Yes" ) || [ "$YESNO" == "" ] ; then
+	wget https://deb.nodesource.com/setup -O node.js_repo.sh && chmod +x node.js_repo.sh
+	apt-get install -y nodejs && rm -f node.js_repo.sh
  fi
 echo " "
  echo -n "RealVNC 5.2.2 - install? - (Y/n) :" && read YESNO
